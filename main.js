@@ -55,6 +55,9 @@ let quiz;
 let data;
 let image;
 
+let totalQuiz = 0;
+let rightAnswers = 0;
+
 function getRandomQuiz() {
     let arguments = Object.values(data);
     let argument = arguments[Math.floor(Math.random() * arguments.length)];
@@ -83,18 +86,22 @@ function checkAns(ans) {
     }
 
     if (ans == quiz.a) {
+        rightAnswers++;
         document.querySelector("#quizList .row:nth-child(1) #solution").innerHTML = "<b class='text-success'>Giusto!</b>";
     } else {
         let rightAns = !ans ? "Vero" : "Falso";
         console.log(rightAns);
         document.querySelector("#quizList .row:nth-child(1) #solution").innerHTML = "<b class='text-danger'>Sbagliato! La risposta giusta era <b class='text-success'>" + rightAns + "</b></b>";
     }
+    
+    document.getElementById("score").innerHTML = rightAnswers + "/" + totalQuiz;
 
     newQuestion();
 }
 
 function newQuestion() {
     getRandomQuiz();
+    totalQuiz++;
 
     document.getElementById("quizList").innerHTML = `<div class="row">
                 <div class="col-6" id="question">
