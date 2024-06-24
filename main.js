@@ -112,7 +112,7 @@ function newQuestion() {
                 
                 <div class="col" id="solution">
                 </div>
-            </div>` + document.getElementById("quizList").innerHTML;
+            </div><hr>` + document.getElementById("quizList").innerHTML;
 
     document.querySelector("#quizList .row:nth-child(1) #question").innerHTML = quiz.q;
     document.querySelector("#quizList .row:nth-child(1) #image").innerHTML = image;
