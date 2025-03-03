@@ -1,4 +1,4 @@
-## This project has been moved [ivanbeltrame/apps](https://github.com/ivanbeltrame/apps) under quiz-patente
+## This project has been moved to [ivanbeltrame/apps](https://github.com/ivanbeltrame/apps) under quiz-patente
 
 # Quiz Patente B
 
